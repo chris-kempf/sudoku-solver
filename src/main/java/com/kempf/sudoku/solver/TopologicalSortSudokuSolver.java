@@ -11,6 +11,4 @@ public class TopologicalSortSudokuSolver implements SudokuSolver {
 		return null;
 	}
 
-	
-	
 }

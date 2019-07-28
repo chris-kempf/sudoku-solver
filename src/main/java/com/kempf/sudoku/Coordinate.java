@@ -1,12 +1,6 @@
 package com.kempf.sudoku;
 
 public class Coordinate {
-
-	private static Coordinate getCoordinate( int r, int c ) {
-
-		return null;
-	}
-
 	private int r;
 	private int c;
 

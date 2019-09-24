@@ -15,6 +15,7 @@ public class TestBacktrackingSudokuSolver extends SudokuTestBase {
 		testAmbitiousSolver();
 		testToughSolver();
 		testVeryToughSolver();
+		testImpossibleSolver();
 	}
 	
 	public void testEasySolver() {
@@ -53,6 +54,14 @@ public class TestBacktrackingSudokuSolver extends SudokuTestBase {
 		BacktrackingSudokuSolver solver = new BacktrackingSudokuSolver();
 
 		SudokuSolution solution = solver.solve( getVeryToughPuzzle() );
+		System.out.println( solution.getMovesNeeded() );
+		System.out.println( solution.getSolved() );
+	}
+	
+	public void testImpossibleSolver() {
+		BacktrackingSudokuSolver solver = new BacktrackingSudokuSolver();
+
+		SudokuSolution solution = solver.solve( getImpossiblePuzzle() );
 		System.out.println( solution.getMovesNeeded() );
 		System.out.println( solution.getSolved() );
 	}

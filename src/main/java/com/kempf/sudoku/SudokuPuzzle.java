@@ -39,6 +39,10 @@ public class SudokuPuzzle {
 		this.C = R;
 	}
 
+	public int[][] getPuzzle() {
+		return puzzle;
+	}
+
 	public int getR() {
 		return R;
 	}
@@ -97,7 +101,7 @@ public class SudokuPuzzle {
 		if ( !prepared ) {
 			prepareForSolution();
 		}
-		
+
 		int numeral = puzzle[r][c];
 		puzzle[r][c] = 0;
 

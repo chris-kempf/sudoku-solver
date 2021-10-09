@@ -4,7 +4,6 @@ import org.junit.Test;
 
 import com.kempf.sudoku.SudokuSolution;
 import com.kempf.sudoku.SudokuTestBase;
-import com.kempf.sudoku.solver.BacktrackingSudokuSolver;
 
 public class TestBacktrackingSudokuSolver extends SudokuTestBase {
 
@@ -16,6 +15,7 @@ public class TestBacktrackingSudokuSolver extends SudokuTestBase {
 		testToughSolver();
 		testVeryToughSolver();
 		testImpossibleSolver();
+		testCrazySolver();
 	}
 	
 	public void testEasySolver() {
@@ -62,6 +62,14 @@ public class TestBacktrackingSudokuSolver extends SudokuTestBase {
 		BacktrackingSudokuSolver solver = new BacktrackingSudokuSolver();
 
 		SudokuSolution solution = solver.solve( getImpossiblePuzzle() );
+		System.out.println( solution.getMovesNeeded() );
+		System.out.println( solution.getSolved() );
+	}
+	
+	public void testCrazySolver() {
+		BacktrackingSudokuSolver solver = new BacktrackingSudokuSolver();
+
+		SudokuSolution solution = solver.solve( getCrazyPuzzle() );
 		System.out.println( solution.getMovesNeeded() );
 		System.out.println( solution.getSolved() );
 	}
